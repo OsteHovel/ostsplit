@@ -1,0 +1,49 @@
+Changelog:
+
+Known issues:
+ - It does not reconnect to LiveSplit
+
+v0.11:
+ - Add multiple selection rectangles
+ - Added autoadjustment for capture
+ - Changed colors so now rect's changes to blue when selected
+ - Now it shows what rectangle that is matching
+
+v0.10:
+ - Fixed so start timer action is not delayed by socket timeout
+ - Socket timeout is now configurable
+
+v0.9:
+ - Added action to itemboxes, so you can choose either SPLIT or STARTTIMER
+ - Removed the requirement of having item name inside of {} when checking for splits
+This breaks the normal compatibility subsplits, but you can always add them to the config.xml file
+
+v0.8:
+ - Fixed a bug with placement of boxes, this breaks all old window capture capture config files.
+ - Added status bar at the bottom to display messages
+ - Added working settings for both window and screen capture
+ - Removed old annoying table for settings
+
+v0.7:
+ - Matching multiple items at the same time
+
+v0.6:
+ - Fixed typo in the window title
+ - Per item duration
+
+v0.5:
+ - Configurable capture method
+
+v0.4:
+ - Added WindowCapture(Windows-only) in addition to ScreenCapture
+
+v0.3:
+ - Small bugfix in LiveSplit integration
+
+v0.2:
+ - Generic split interface added
+ - LiveSplit ip and port is now configurable in the XML files
+ - XML files are now saved in "pretty print" format
+
+v0.1:
+ - Initial testing release

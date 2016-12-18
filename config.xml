@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<smsplit>
+    <capture method="WINDOWCAPTURE">
+        <screencapture x="0" y="0" width="640" height="480"/>
+        <windowcapture windowTitle="CAP - VNC Viewer" x="0" y="0" width="640" height="480"/>
+    </capture>
+    <splitters method="LIVESPLIT">
+        <livesplit host="127.0.0.1" port="16834" timeout="1000"/>
+        <hotkeysplit itemSplitKeycode="0" delay="20"/>
+    </splitters>
+    <debug capture="false"/>
+    <itemboxes matching="true">
+        <itembox name="{Start Game}" action="STARTTIMER" duration="2000">
+            <rectangle x="18.827047602791207" y="14.528147345020198" width="60.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="18.827047602791207" y="56.594953190531676" width="60.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="18.827047602791207" y="68.70351268948784" width="60.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="18.827047602791207" y="85.63044379595965" width="60.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="6.977015839848022" y="23.91197324000274" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.977015839848022" y="37.48191060952257" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="6.977015839848022" y="49.068549440420284" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="6.977015839848022" y="62.53410267632843" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="6.977015839848022" y="76.93911311474179" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="71.78951583984802" y="31.53201499365619" width="15.0" height="10.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="1.0" y="92.59673315649545" width="5.0" height="3.0" r="0" g="0" b="0" tolerance="50"
+                       invert="false"/>
+            <rectangle x="8.227015839848022" y="92.59673315649545" width="20.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="31.742640839848022" y="92.59673315649545" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="38.22701583984802" y="92.59673315649545" width="15.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="57.21139083984802" y="92.59673315649545" width="5.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="63.77389083984802" y="92.59673315649545" width="20.0" height="3.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="90.2" y="92.59673315649545" width="5.0" height="3.0" r="0" g="0" b="0" tolerance="50"
+                       invert="false"/>
+            <rectangle x="88.43014083984802" y="18.170845891359743" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="91.24264083984802" y="39.67397741536809" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="78.66451583984802" y="78.81802751975222" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="3.742640839848022" y="39.5695932817564" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="22.570765839848022" y="72.03305883499232" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Energy Tank" action="SPLIT" duration="4000">
+            <rectangle x="23.676390479910836" y="50.41118434255476" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.24479310389713" y="56.92523670409976" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="27.960970293683697" y="53.29558373937346" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="49.921935314109106" y="53.14669405446054" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="65.75197019548824" y="53.474334505771886" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="47.891068316464676" y="51.14631460930043" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="35.23365877479978" y="53.43436195340499" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="42.6351761222242" y="53.48192657335124" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="56.71026860227896" y="53.69995284743148" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.377734287050345" y="42.5229801644896" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.373040752351102" y="60.833333333333336" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Reserve Tank" action="SPLIT" duration="4000">
+            <rectangle x="24.064343163538872" y="52.2451690821256" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.622527390947468" y="59.02536231884059" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="23.72667079495496" y="55.812531479372595" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="50.07575981276189" y="55.98307358218382" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="66.34267168956656" y="55.87669530187423" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="44.5810214661837" y="54.32832707027532" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="31.37336558532505" y="55.74389957219207" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="56.60264724444748" y="56.44112014541442" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.0" y="51.25" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50" invert="true"/>
+            <rectangle x="5.940438871473354" y="61.041666666666664" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Missile" action="SPLIT" duration="4000">
+            <rectangle x="11.915966386554622" y="46.82271623187605" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="12.363198840002543" y="64.55107575323059" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="38.517094557946876" y="58.05773820704114" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="17.97030654611285" y="57.79739906102718" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="37.473856559288926" y="49.69636575183926" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="62.598379764658056" y="49.53681904902628" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="30.65520569313741" y="56.577559708407996" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.4646945738582176" y="43.00284228350266" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="8.134796238244519" y="72.76729559748429" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Super Missile" action="SPLIT" duration="4000">
+            <rectangle x="11.430332981877264" y="46.4606341428628" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="12.550874702244151" y="63.67355147135557" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="42.089219704316605" y="56.75007188623023" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="10.676660143293187" y="57.371955742336226" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="64.02742792587091" y="49.446405690212906" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="69.23313803875405" y="48.91283568083698" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.005746440947103" y="49.182298078664346" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="32.17995605726753" y="58.383025962202986" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.0227056235819845" y="41.095186260280585" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.815029702627342" y="67.8722181906144" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Power Bomb" action="SPLIT" duration="4000">
+            <rectangle x="10.053148663299353" y="50.14095081771967" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="11.569168149833658" y="65.6373650929838" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="34.04167279625844" y="60.48080805302351" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="12.851408202089186" y="60.750270450850884" width="12.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="30.47484915920493" y="51.685499535335474" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="65.22580152552241" y="52.687022756187055" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.655622666591256" y="62.475088043884" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.8432601880877755" y="47.91666666666667" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.0" y="67.70833333333333" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+        </itembox>
+        <itembox name="Morphing Ball" action="SPLIT" duration="4000">
+            <rectangle x="24.344877533040723" y="50.4845691629626" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.337278252583456" y="57.21649964351926" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.824353920720256" y="53.523270446499744" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="53.37614314695291" y="53.300053167146956" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="67.32484747049232" y="53.330944286889995" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="28.71007598366443" y="53.336845293419145" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="38.0903462977295" y="53.27995964458663" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="58.659402834817" y="53.78896815612745" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="2.9906129306015075" y="45.21740445089502" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.9819879111172725" y="61.65971214320271" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Bombs" action="SPLIT" duration="4000">
+            <rectangle x="15.23747306821246" y="45.12010861760807" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="15.149395336424902" y="64.97099383213131" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="33.27882786315464" y="49.4313755709345" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="56.804239423646344" y="49.50038124608635" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="20.939519368661802" y="58.36575665605476" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="14.831239094536759" y="56.54881162679081" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="24.03238443620598" y="61.18152344158839" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="7.3174382055702765" y="38.45627147000078" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="7.093179588840949" y="72.96904096834264" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Speed Booster" action="SPLIT" duration="4000">
+            <rectangle x="12.32480703880298" y="48.89659512745678" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="12.084033613445378" y="66.14694390266426" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="11.744500758964122" y="60.97468455117846" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.82050753380879" y="52.65920268003041" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="67.83575490757543" y="52.29338903173645" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="50.73562131530188" y="52.705134438560584" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="32.13753831686391" y="51.566682994991034" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.8808777429467085" y="49.58333333333333" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.470219435736677" y="67.5" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+        </itembox>
+        <itembox name="Space Jump" action="SPLIT" duration="4000">
+            <rectangle x="24.758787607983322" y="51.53322682490776" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.89500794360044" y="58.6743124500742" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="27.827245301079312" y="55.51163804826144" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="48.20454014258208" y="54.66893735424955" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="62.117025833998056" y="55.143136019926786" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="33.94175985246608" y="55.09083601666257" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="51.98738421133455" y="55.22238181021472" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="2.962382445141067" y="52.5" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+            <rectangle x="7.037617554858933" y="64.58333333333334" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Hi-jump Boots" action="SPLIT" duration="4000">
+            <rectangle x="23.3409964210676" y="53.393264674354576" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.09274682668415" y="58.30357754193772" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="34.73902183434625" y="55.13167506342972" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="48.426545942038864" y="57.3763483566266" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="68.12384322083189" y="54.904052329174746" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="29.755280101808925" y="55.92220154797571" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="32.02235313700115" y="56.60959966285984" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="65.88336830049518" y="55.842165026275254" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="3.7460815047021967" y="51.666666666666664" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.783699059561123" y="60.83333333333333" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Varia Suit" action="SPLIT" duration="4000">
+            <rectangle x="25.609279352476836" y="50.748283916580505" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.210769146792586" y="56.32742148633581" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="28.10673426123302" y="53.19607336730284" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="47.157679734961015" y="53.44889615664165" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="61.94869374225856" y="53.461704080597364" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="35.50424575471422" y="52.64486919974452" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="38.642832485574814" y="52.10753079452815" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="51.540999077164344" y="52.39346378101625" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.501550078802893" y="47.08544992743106" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.7554685741007034" y="62.38056361877117" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Gravity Suit" action="SPLIT" duration="4000">
+            <rectangle x="22.01972557824503" y="52.69928845356781" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.7792672028597" y="58.97943056031041" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.16801690683814" y="55.22733403692357" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="49.442935755878864" y="55.08412381409368" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="65.40390142546721" y="54.65154887799975" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="29.031484758663066" y="55.314647923955015" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="37.63170149425711" y="55.479360141901765" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="56.17877090716326" y="55.85057531991235" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.097178683385579" y="52.08333333333333" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.313479623824449" y="61.04166666666667" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Spring Ball" action="SPLIT" duration="4000">
+            <rectangle x="22.967164480153293" y="52.03683574879227" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.7792672028597" y="58.192028985507264" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="28.0835669758335" y="56.23566074838653" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="49.81165892025162" y="57.066978945204525" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="63.48392012977716" y="55.719768894947826" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="32.58545110607663" y="54.98278681208109" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="57.56863865668635" y="55.816120145414416" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.529780564263326" y="51.875" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+            <rectangle x="5.626959247648905" y="60.625" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+        </itembox>
+        <itembox name="Screw Attack" action="SPLIT" duration="4000">
+            <rectangle x="22.967164480153293" y="52.03683574879227" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.7792672028597" y="58.192028985507264" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.948770737588983" y="55.818994081719865" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="43.22858681993814" y="57.066978945204525" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="65.05131824889942" y="56.344768894947826" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="29.607394679744345" y="55.60778681208109" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="57.56863865668635" y="55.816120145414416" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.529780564263326" y="51.875" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+            <rectangle x="5.626959247648905" y="60.625" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+        </itembox>
+        <itembox name="Charge Beam" action="SPLIT" duration="4000">
+            <rectangle x="25.95543930306328" y="49.08099038547505" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.44225062827406" y="56.194626039322564" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="28.152320821043364" y="53.03533753125631" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="49.78900244653724" y="53.32140043014892" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="66.1388223486678" y="53.41400629012764" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="32.74396950258405" y="53.50417452845253" width="0.5" height="0.5" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="36.83772461616705" y="53.615950719899416" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="41.46352437903502" y="53.32546289020132" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="57.00573613722071" y="53.31742548646481" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="7.232806248809304" y="44.76324383164006" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="7.073641732624388" y="60.15693033381713" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Ice Beam" action="SPLIT" duration="4000">
+            <rectangle x="21.672246913684" y="53.144119213359204" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="26.18992551006972" y="59.24353817185898" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="31.83195105109728" y="56.01764291005454" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="43.35212857282631" y="56.47855898932231" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="59.393346284281634" y="55.91119323514155" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="38.41842162779676" y="56.00792042315596" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="53.69406392257815" y="55.6431026838513" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="48.16581539813289" y="56.0310740957814" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.686520376175551" y="51.458333333333336" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="6.253918495297803" y="60.833333333333336" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Wave Beam" action="SPLIT" duration="4000">
+            <rectangle x="23.905622743100785" y="52.27684858185633" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="24.799277792251814" y="58.375269774630574" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="31.14888129252676" y="56.15478090881373" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="46.53320419940731" y="55.496221801848904" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="62.16891697404308" y="56.44496200671979" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="37.840496616171095" y="55.15054317316306" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="53.04176799898406" y="55.281683083165916" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.470219435736681" y="51.666666666666664" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.0" y="70.0" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Spazer" action="SPLIT" duration="4000">
+            <rectangle x="25.619766358820193" y="48.17329601140392" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.32650988753332" y="56.23165334124364" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="34.547335152410405" y="53.28885459263997" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="69.09918653765354" y="52.59809187769546" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="56.719501200264204" y="53.14765362355181" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="44.010303234909614" y="53.69057127940046" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="38.0992677131331" y="53.06151356986637" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="49.56811046834507" y="53.37742112032892" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="3.550892810751833" y="44.55491049830672" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.285249138364016" y="62.013183357522976" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Plasma Beam" action="SPLIT" duration="4000">
+            <rectangle x="24.180083904279616" y="53.869214298778914" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.56296626242083" y="58.19695024534978" width="50.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="27.837860368565018" y="56.235227221950225" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="49.728660463520896" y="56.28656275375376" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="65.25484444811526" y="55.66730492524942" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="35.34939951554052" y="56.16044875968046" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="57.81381065845066" y="57.62595651969833" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="60.37830175720404" y="56.51472700771844" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.373040752351095" y="51.25" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+            <rectangle x="4.8432601880877755" y="61.24999999999999" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Grappling Beam" action="SPLIT" duration="4000">
+            <rectangle x="11.77728659433383" y="48.46444163136797" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="13.293306080868142" y="65.63244383314128" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="33.37598959507829" y="60.60928802116299" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="13.902846105707614" y="60.80199052209617" width="10.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="44.39959674525094" y="52.45665765941218" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="72.04217728844002" y="52.44102682701203" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.044732542516556" y="52.2326934936787" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.49888285467903" y="65.18085512115164" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.626959247648905" y="48.74999999999999" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="5.0" y="67.29166666666667" width="90.0" height="1.0" r="0" g="0" b="0" tolerance="50"
+                       invert="true"/>
+        </itembox>
+        <itembox name="X-ray Scope" action="SPLIT" duration="4000">
+            <rectangle x="9.623928298734157" y="49.988391762601566" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="11.998388514398847" y="65.85061968615965" width="75.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="41.536733516471294" y="59.652829505968995" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="11.275388905481655" y="56.9601270050358" width="20.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="56.98435478639843" y="52.140829976618335" width="1.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="68.68065185090875" y="51.81559330057574" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="30.6946222441304" y="51.876722365069774" width="3.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="false"/>
+            <rectangle x="25.51461720484543" y="63.577450248608415" width="5.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="9.858934169279" y="49.791666666666664" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+            <rectangle x="4.373040752351095" y="67.29166666666667" width="90.0" height="1.0" r="0" g="0" b="0"
+                       tolerance="50" invert="true"/>
+        </itembox>
+        <itembox name="Elevator (Up)" action="SPLIT" duration="200">
+            <rectangle x="1.1104972375690636" y="15.532656023222062" width="30.0" height="50.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="69.11049723756906" y="15.532656023222062" width="30.0" height="50.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="81.51049723756907" y="0.3326560232220608" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="3.832656023222061" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="7.43265602322206" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="11.032656023222062" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="84.61049723756906" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="87.81049723756907" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="90.91049723756906" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="94.11049723756906" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="97.21049723756906" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="82.41049723756906" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756906" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="91.91049723756906" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756907" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.41049723756906" y="5.13265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="5.13265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756906" y="5.13265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="91.91049723756906" y="5.13265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756907" y="5.13265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.41049723756906" y="8.732656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="8.732656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756906" y="8.732656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="91.91049723756906" y="8.732656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756907" y="8.732656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Lower Norfair Elevator (Down)" action="SPLIT" duration="500">
+            <rectangle x="1.0" y="18.0" width="98.0" height="50.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="81.4" y="2.8" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="6.3" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="9.9" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="13.5" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="84.5" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="87.7" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="90.8" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.0" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="97.1" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.9" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+        </itembox>
+        <itembox name="Blue Crateria Elevator (Down)" action="SPLIT" duration="500">
+            <rectangle x="1.1104972375690494" y="15.53265602322206" width="98.0" height="50.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="81.51049723756906" y="0.3326560232220608" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756906" y="3.832656023222061" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756906" y="7.432656023222061" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756906" y="11.03265602322206" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756906" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="84.61049723756905" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="87.81049723756905" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="90.91049723756905" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="94.11049723756905" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="97.21049723756904" y="0.3326560232220608" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="82.41049723756905" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756906" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756904" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="91.91049723756905" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756906" y="1.3326560232220608" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.41049723756905" y="5.132656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="85.51049723756906" y="5.132656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="88.71049723756904" y="5.132656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="91.91049723756905" y="5.132656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756906" y="5.132656023222061" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.41049723756905" y="8.73265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756906" y="8.73265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756904" y="8.73265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="91.91049723756905" y="8.73265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756906" y="8.73265602322206" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Green Brinstar/Norfair Elevator (Down)" action="SPLIT" duration="500">
+            <rectangle x="1.1104972375690636" y="15.387518142235123" width="98.0" height="50.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="81.51049723756907" y="0.18751814223512397" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="3.687518142235124" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="7.287518142235125" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="10.887518142235123" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.51049723756907" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="84.61049723756909" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="87.81049723756908" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="90.91049723756905" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="94.11049723756909" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="97.21049723756906" y="0.18751814223512397" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="82.41049723756905" y="1.187518142235124" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="1.187518142235124" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756906" y="1.187518142235124" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="91.91049723756905" y="1.187518142235124" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.01049723756907" y="1.187518142235124" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.41049723756905" y="4.987518142235121" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="4.987518142235121" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.71049723756906" y="4.987518142235121" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="91.91049723756905" y="4.987518142235121" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="95.01049723756907" y="4.987518142235121" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="82.41049723756905" y="8.587518142235123" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.51049723756907" y="8.587518142235123" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Red Brinstar Elevator (Down)" action="SPLIT" duration="500">
+            <rectangle x="1.0" y="18.0" width="98.0" height="50.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="81.4" y="2.8" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="6.3" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="9.9" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="13.5" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="84.5" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="87.7" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="90.8" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.0" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="97.1" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Boss" action="SPLIT" duration="500">
+            <rectangle x="1.220994475138113" y="15.677793904208993" width="98.0" height="20.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="1.220994475138113" y="76.67779390420898" width="98.0" height="20.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="81.62099447513812" y="0.4777939042089958" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.62099447513812" y="3.977793904208996" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.62099447513812" y="7.577793904208992" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.62099447513812" y="11.177793904208993" width="16.0" height="0.8" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="81.62099447513812" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="84.72099447513811" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="87.92099447513812" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="91.02099447513811" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="94.22099447513811" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="97.32099447513811" y="0.4777939042089958" width="0.7" height="11.6" r="0" g="0" b="0"
+                       tolerance="30" invert="true"/>
+            <rectangle x="82.52099447513811" y="1.4777939042089958" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.62099447513812" y="1.4777939042089958" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.82099447513811" y="1.4777939042089958" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="92.02099447513811" y="1.4777939042089958" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.12099447513812" y="1.4777939042089958" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.52099447513811" y="5.277793904208995" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.62099447513812" y="5.277793904208995" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.82099447513811" y="5.277793904208995" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="92.02099447513811" y="5.277793904208995" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.12099447513812" y="5.277793904208995" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="82.52099447513811" y="8.877793904208996" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="85.62099447513812" y="8.877793904208996" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="88.82099447513811" y="8.877793904208996" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="92.02099447513811" y="8.877793904208996" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+            <rectangle x="95.12099447513812" y="8.877793904208996" width="2.0" height="2.0" r="0" g="0" b="0"
+                       tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Lower Norfair Exit" action="SPLIT" duration="500">
+            <rectangle x="1.0" y="18.0" width="98.0" height="20.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="81.4" y="2.8" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="6.3" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="9.9" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="13.5" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="84.5" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="87.7" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="90.8" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.0" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="97.1" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.9" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="85.4" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="88.6" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Maridia Entrance" action="SPLIT" duration="500">
+            <rectangle x="1.0" y="18.0" width="30.0" height="20.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="81.4" y="2.8" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="6.3" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="9.9" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="13.5" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="84.5" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="87.7" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="90.8" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.0" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="97.1" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="88.6" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.9" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Golden Four" action="SPLIT" duration="500">
+            <rectangle x="1.0" y="18.0" width="98.0" height="20.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="81.4" y="2.8" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="6.3" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="9.9" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="13.5" width="16.0" height="0.8" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="81.4" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="84.5" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="87.7" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="90.8" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="94.0" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="97.1" y="2.8" width="0.7" height="11.6" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="82.3" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="3.8" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="85.4" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="88.6" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="true"/>
+            <rectangle x="91.8" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="7.6" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="82.3" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="85.4" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="88.6" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="91.8" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="94.9" y="11.2" width="2.0" height="2.0" r="0" g="0" b="0" tolerance="30" invert="false"/>
+        </itembox>
+        <itembox name="Black" action="SPLIT" duration="1000">
+            <rectangle x="81.4" y="2.8" width="16.0" height="11.6" r="0" g="0" b="0" tolerance="30" invert="false"/>
+            <rectangle x="1.0" y="2.8" width="90.0" height="11.6" r="0" g="0" b="0" tolerance="30" invert="false"/>
+        </itembox>
+    </itemboxes>
+</smsplit>

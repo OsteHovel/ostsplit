@@ -1,0 +1,16 @@
+Big thanks to:
+ - 0xff42 for supporting me during the development, without our brainstorming this would not exist
+
+Testing crew:
+ - Matrick
+ - Nutella4Eva
+ - InsaneFirebat
+
+Thanks to:
+ - Super Metroid speedrunning community
+ - Nintendo for making this awesome game.
+ - Jathys for making the awesome SMILE.
+ - My cousin that introduced me to Java, and together we have been through a lot of projects.
+ - Metroid Construction community.
+ - JetBrains for making IntelliJ, without it, we would still be stuck with Eclipse, and this project would never have been born.
+ - Tango Desktop Project for making awesome icons.
