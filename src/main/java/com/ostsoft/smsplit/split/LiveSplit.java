@@ -1,8 +1,10 @@
 package com.ostsoft.smsplit.split;
 
-import com.ostsoft.smsplit.xml.config.Action;
 import com.ostsoft.smsplit.xml.config.ConfigXML;
 import com.ostsoft.smsplit.xml.config.ItemBox;
+import com.ostsoft.smsplit.xml.config.action.Action;
+import com.ostsoft.smsplit.xml.config.action.ActionXML;
+import com.ostsoft.smsplit.xml.config.action.Matching;
 
 import javax.swing.*;
 import java.io.BufferedReader;
@@ -33,7 +35,8 @@ public class LiveSplit implements Split {
             socket.setSoTimeout(timeout);
             osw = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
             in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
             logger.log(Level.SEVERE, e.getMessage());
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -74,7 +77,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "split");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -87,7 +91,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "starttimer");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -100,7 +105,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "startorsplit");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -112,7 +118,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "unsplit");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -124,7 +131,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "skipsplit");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -136,7 +144,8 @@ public class LiveSplit implements Split {
         }
         try {
             send(osw, "reset");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -161,9 +170,11 @@ public class LiveSplit implements Split {
         try {
             send(osw, command);
             return in.readLine();
-        } catch (SocketTimeoutException ignored) {
+        }
+        catch (SocketTimeoutException ignored) {
             return null;
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             closeSocket();
             e.printStackTrace();
         }
@@ -183,7 +194,8 @@ public class LiveSplit implements Split {
             osw.close();
             in.close();
             socket.close();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -197,25 +209,44 @@ public class LiveSplit implements Split {
     @Override
     public void itemSplit(Set<ItemBox> itemsToSplitOn) {
         for (ItemBox itemBox : itemsToSplitOn) {
-            if (itemBox.action == Action.STARTTIMER) {
-                logger.log(Level.INFO, "Starting Livesplit timer");
-                startTimer();
+            for (ActionXML action : itemBox.actions) {
+                if (action.action == Action.STARTTIMER) {
+                    logger.log(Level.INFO, "Starting Livesplit timer");
+                    startTimer();
+                    break;
+                }
             }
         }
 
         String currentSplitName = getCurrentSplitName();
-        if (!itemsToSplitOn.isEmpty() && currentSplitName != null) {
-            logger.log(Level.INFO, "Current LiveSplit SplitName: " + currentSplitName + " checking against items...");
+        if (currentSplitName != null) {
+            logger.log(Level.INFO, "Current LiveSplit SplitName: " + currentSplitName + " checking against actions...");
             for (ItemBox itemBox : itemsToSplitOn) {
-                if (currentSplitName.toLowerCase().contains(itemBox.name.toLowerCase())) {
-                    if (itemBox.action == Action.SPLIT) {
+                for (ActionXML action : itemBox.actions) {
+                    if (action.action != Action.SPLIT) {
+                        continue;
+                    }
+
+                    if (action.matching == Matching.CONTAINS && currentSplitName.contains(action.name)) {
+                        logger.log(Level.INFO, "LiveSplit is splitting on " + action.name + " with matching " + action.matching.name());
                         split();
                     }
-                    logger.log(Level.INFO, "LiveSplit is splitting!");
-                    break;
+                    else if (action.matching == Matching.CONTAINS_INSENSITIVE && currentSplitName.toLowerCase().contains(action.name.toLowerCase())) {
+                        logger.log(Level.INFO, "LiveSplit is splitting on " + action.name + " with matching " + action.matching.name());
+                        split();
+                    }
+                    else if (action.matching == Matching.EQUALS && currentSplitName.equals(action.name)) {
+                        logger.log(Level.INFO, "LiveSplit is splitting on " + action.name + " with matching " + action.matching.name());
+                        split();
+                    }
+                    else if (action.matching == Matching.EQUALS_INSENSITIVE && currentSplitName.equalsIgnoreCase(action.name)) {
+                        logger.log(Level.INFO, "LiveSplit is splitting on " + action.name + " with matching " + action.matching.name());
+                        split();
+                    }
                 }
             }
-        } else if (currentSplitName == null) {
+        }
+        else {
             logger.log(Level.WARNING, "Current split received from LiveSplit was null, are your timer running?");
         }
     }

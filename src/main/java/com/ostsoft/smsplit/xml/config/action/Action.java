@@ -1,4 +1,4 @@
-package com.ostsoft.smsplit.xml.config;
+package com.ostsoft.smsplit.xml.config.action;
 
 public enum Action {
     STARTTIMER,

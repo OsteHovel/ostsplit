@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class About extends JFrame {
-    public final static String VERSION = "0.11";
+    public final static String VERSION = "0.12";
     public static final String SPECIAL = "";
 
     public About() throws HeadlessException {

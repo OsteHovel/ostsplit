@@ -110,7 +110,10 @@ public class ItemBoxSplitter {
                 }
             }
             if (!error) {
+                itemBox.matching = true;
                 matching.add(itemBox);
+            } else {
+                itemBox.matching = false;
             }
         }
         return matching;

@@ -3,6 +3,9 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+v0.12:
+ - Added actions to each itemBox and configurable matching methods
+
 v0.11:
  - Add multiple selection rectangles
  - Added autoadjustment for capture
