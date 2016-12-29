@@ -24,7 +24,6 @@ public class AutoData extends Observable {
 
     private BufferedImage gameImage;
     private ItemBox selectedItemBox = null;
-    private RectangleXML selectedItemBoxRectangle;
     private Set<RectangleXML> selectedItemBoxRectangles = new HashSet<>();
 
     public CommandCenter getCommandCenter() {
