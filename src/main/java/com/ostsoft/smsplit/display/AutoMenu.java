@@ -44,8 +44,6 @@ public class AutoMenu extends JMenuBar {
         mnHelp.setMnemonic(KeyEvent.VK_H);
         add(mnHelp);
         {
-//            mnHelp.add(new JMenuItem(editor.getEditorActions().getHelpAction()));
-
             mnHelp.add(new JSeparator());
 
             JMenuItem mntmAbout = new JMenuItem("About");
