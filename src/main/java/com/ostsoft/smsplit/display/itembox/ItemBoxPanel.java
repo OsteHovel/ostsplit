@@ -104,16 +104,10 @@ public class ItemBoxPanel extends AutoPanel {
                 dragEntry.y = (y + clickOffsetY);
 
                 for (RectangleXML rectangleXML : autoData.getSelectedItemBoxRectangles()) {
-                    rectangleXML.x = startEntry.get(rectangleXML).x + (x + clickOffsetX) - startDragX;
-                    rectangleXML.y = startEntry.get(rectangleXML).y + (y + clickOffsetY) - startDragY;
+                    Point.Double startingPosition = startEntry.get(rectangleXML);
+                    rectangleXML.x = startingPosition.x + (x + clickOffsetX) - startDragX;
+                    rectangleXML.y = startingPosition.y + (y + clickOffsetY) - startDragY;
                 }
-
-
-                refresh();
-            }
-
-            private void refresh() {
-
             }
 
             @Override
@@ -128,8 +122,6 @@ public class ItemBoxPanel extends AutoPanel {
                 double x = ((e.getX() - offsetX) * 100d) / imagePanel.getImage().getWidth(null);
                 double y = ((e.getY() - offsetY) * 100d) / imagePanel.getImage().getHeight(null);
 
-                System.out.println(x + " x " + y);
-
                 for (RectangleXML rectangleXML : autoData.getSelectedItemBox().rectangles) {
                     if (x >= rectangleXML.x && x <= rectangleXML.x + rectangleXML.width && y >= rectangleXML.y && y <= rectangleXML.y + rectangleXML.height) {
                         clickOffsetX = (rectangleXML.x - x);
@@ -137,10 +129,6 @@ public class ItemBoxPanel extends AutoPanel {
                         startDragX = rectangleXML.x;
                         startDragY = rectangleXML.y;
                         dragEntry = rectangleXML;
-
-                        for (RectangleXML selectedRectangle : autoData.getSelectedItemBoxRectangles()) {
-                            startEntry.put(selectedRectangle, new Point.Double(selectedRectangle.x, selectedRectangle.y));
-                        }
 
                         if (!autoData.getSelectedItemBoxRectangles().contains(rectangleXML)) {
                             if (e.isShiftDown()) {
@@ -152,6 +140,10 @@ public class ItemBoxPanel extends AutoPanel {
                                 autoData.getSelectedItemBoxRectangles().add(rectangleXML);
                                 autoData.fireEvent(EventType.ITEMBOX_RECTANGLE_SELECTED);
                             }
+                        }
+
+                        for (RectangleXML selectedRectangle : autoData.getSelectedItemBoxRectangles()) {
+                            startEntry.put(selectedRectangle, new Point.Double(selectedRectangle.x, selectedRectangle.y));
                         }
                         return;
                     }
@@ -172,8 +164,9 @@ public class ItemBoxPanel extends AutoPanel {
                 }
 
                 for (RectangleXML rectangleXML : autoData.getSelectedItemBoxRectangles()) {
-                    rectangleXML.x = startEntry.get(rectangleXML).x;
-                    rectangleXML.y = startEntry.get(rectangleXML).y;
+                    Point.Double startingPosition = startEntry.get(rectangleXML);
+                    rectangleXML.x = startingPosition.x;
+                    rectangleXML.y = startingPosition.y;
                 }
 
                 dragEntry.x = startDragX;
@@ -189,11 +182,7 @@ public class ItemBoxPanel extends AutoPanel {
                     ));
                 }
                 dragEntry = null;
-            }
-
-            class DragRectangle {
-                public double startX;
-                public double startY;
+                startEntry.clear();
             }
         };
         imagePanel.addMouseListener(mouseAdapter);

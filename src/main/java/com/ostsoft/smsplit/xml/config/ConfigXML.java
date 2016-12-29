@@ -1,5 +1,6 @@
 package com.ostsoft.smsplit.xml.config;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -17,5 +18,6 @@ public class ConfigXML {
     @XmlElement(name = "itemboxes")
     public ItemBoxesXML itemBoxes = new ItemBoxesXML();
 
-
+    @XmlAttribute
+    public float cycleTime = 250f;
 }

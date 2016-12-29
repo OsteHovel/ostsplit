@@ -24,6 +24,8 @@ public class AutoActions implements Observer {
     private final Action undoAction = new UndoAction();
     private final Action redoAction = new RedoAction();
 
+    private final Action pauseAction = new PauseAction();
+
     public AutoActions(AutoWindow autoWindow) {
         this.autoWindow = autoWindow;
     }
@@ -66,6 +68,10 @@ public class AutoActions implements Observer {
 
     public Action getRedoAction() {
         return redoAction;
+    }
+
+    public Action getPauseAction() {
+        return pauseAction;
     }
 
 
@@ -189,6 +195,25 @@ public class AutoActions implements Observer {
 
         public void actionPerformed(ActionEvent e) {
             autoWindow.getAutoData().getCommandCenter().redo();
+        }
+
+    }
+
+    private class PauseAction extends AbstractAction {
+
+        public PauseAction() {
+            putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
+            putValue(NAME, "Pause");
+            putValue(MNEMONIC_KEY, KeyEvent.VK_P);
+            putValue(SHORT_DESCRIPTION, "Pause capture");
+//            putValue(SMALL_ICON, ResourceUtil.getIcon("images/actions/edit-redo.png"));
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource() instanceof JCheckBoxMenuItem) {
+                JCheckBoxMenuItem source = (JCheckBoxMenuItem) e.getSource();
+                autoWindow.getAutoData().setCapturePaused(source.getState());
+            }
         }
 
     }

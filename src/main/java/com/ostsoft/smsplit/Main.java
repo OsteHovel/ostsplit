@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final float cycleTime = 250f;
+    private static float cycleTime = 250f;
     private static Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
@@ -38,5 +38,13 @@ public class Main {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static float getCycleTime() {
+        return cycleTime;
+    }
+
+    public static void setCycleTime(float cycleTime) {
+        Main.cycleTime = cycleTime;
     }
 }

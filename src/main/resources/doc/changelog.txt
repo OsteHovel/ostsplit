@@ -3,6 +3,10 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+r14:
+ - Fixed exception while dragging rectangles
+ - Added ability to pause the capture from the menu
+
 r13:
  - Changed to use revision instead of version
  - Autoadjust actually changes the x,y,width and height number boxes

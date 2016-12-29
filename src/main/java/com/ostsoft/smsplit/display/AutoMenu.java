@@ -33,6 +33,13 @@ public class AutoMenu extends JMenuBar {
             mnEdit.add(new JSeparator());
         }
 
+        JMenu mnCapture = new JMenu("Capture");
+        mnEdit.setMnemonic(KeyEvent.VK_C);
+        add(mnCapture);
+        {
+            mnCapture.add(new JCheckBoxMenuItem(autoWindow.getAutoActions().getPauseAction()));
+        }
+
         JMenu mnHelp = new JMenu("Help");
         mnHelp.setMnemonic(KeyEvent.VK_H);
         add(mnHelp);

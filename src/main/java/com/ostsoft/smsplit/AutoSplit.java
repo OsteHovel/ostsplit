@@ -16,8 +16,6 @@ import com.ostsoft.smsplit.xml.config.action.ActionXML;
 import com.ostsoft.smsplit.xml.config.action.Matching;
 
 import javax.swing.*;
-import java.awt.image.BufferedImage;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AutoSplit {
@@ -33,6 +31,7 @@ public class AutoSplit {
             autoData.config = new ConfigXML();
         }
 
+        Main.setCycleTime(autoData.config.cycleTime);
         addDefault(autoData.config);
 
 
@@ -54,7 +53,6 @@ public class AutoSplit {
             autoData.setCapture(new WindowCapture(autoData));
         }
 
-
         autoWindow = new AutoWindow(autoData);
         itemBoxSplitter = new ItemBoxSplitter(autoData);
     }
@@ -68,15 +66,9 @@ public class AutoSplit {
     }
 
     public void cycle(long timeSinceLastUpdate) {
-        if (autoData.config.debug.capture) {
-            logger.log(Level.INFO, "Capture");
+        if (!autoData.isCapturePaused()) {
+            autoData.setGameImage(autoData.getCapture().capture());
         }
-        BufferedImage gameImage = autoData.getCapture().capture();
-        if (autoData.config.debug.capture) {
-            logger.log(Level.INFO, "Captured");
-        }
-        autoData.setGameImage(gameImage);
-        itemBoxSplitter.checkForBox(gameImage);
         autoData.fireEvent(EventType.UPDATED_GAME_IMAGE);
     }
 

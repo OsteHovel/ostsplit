@@ -25,6 +25,7 @@ public class AutoData extends Observable {
     private BufferedImage gameImage;
     private ItemBox selectedItemBox = null;
     private Set<RectangleXML> selectedItemBoxRectangles = new HashSet<>();
+    private boolean capturePaused = false;
 
     public CommandCenter getCommandCenter() {
         return commandCenter;
@@ -72,5 +73,13 @@ public class AutoData extends Observable {
 
     public void setSplitter(Split splitter) {
         this.splitter = splitter;
+    }
+
+    public boolean isCapturePaused() {
+        return capturePaused;
+    }
+
+    public void setCapturePaused(boolean capturePaused) {
+        this.capturePaused = capturePaused;
     }
 }

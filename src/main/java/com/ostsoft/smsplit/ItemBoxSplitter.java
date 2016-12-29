@@ -1,6 +1,7 @@
 package com.ostsoft.smsplit;
 
 import com.ostsoft.smsplit.observer.EventType;
+import com.ostsoft.smsplit.observer.Observer;
 import com.ostsoft.smsplit.util.ImageUtil;
 import com.ostsoft.smsplit.xml.config.ItemBox;
 import com.ostsoft.smsplit.xml.config.RectangleXML;
@@ -16,12 +17,24 @@ import java.util.stream.Collectors;
 public class ItemBoxSplitter {
     private static Logger logger = Logger.getLogger(ItemBoxSplitter.class.getName());
     private final AutoData autoData;
+    private final Observer observer;
 
     public ItemBoxSplitter(AutoData autoData) {
         this.autoData = autoData;
+
+        observer = (eventType, message) -> {
+            switch (eventType) {
+                case UPDATED_GAME_IMAGE:
+                    if (autoData.getGameImage() != null) {
+                        checkForBox(autoData.getGameImage());
+                    }
+                    break;
+            }
+        };
+        autoData.addObserver(observer);
     }
 
-    public void checkForBox(BufferedImage gameImage) {
+    private void checkForBox(BufferedImage gameImage) {
         if (!autoData.config.itemBoxes.itemMatching || gameImage == null) {
             return;
         }
