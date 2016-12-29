@@ -47,7 +47,7 @@ public class AutoWindow {
             public void windowClosing(java.awt.event.WindowEvent windowEvent) {
                 if (autoData.isConfigChanged()) {
                     int returnDialogValue = JOptionPane.showConfirmDialog(frame,
-                            "You have unsaved changes, do you want save them?", "SMsplit",
+                            "You have unsaved changes, do you want save them?", "SMsplit r" + About.REVISION,
                             JOptionPane.YES_NO_CANCEL_OPTION,
                             JOptionPane.QUESTION_MESSAGE);
 
@@ -73,7 +73,7 @@ public class AutoWindow {
     }
 
     private void setTitle() {
-        frame.setTitle("SMsplit" + (autoData.isConfigChanged() ? "*" : "") + " " + About.VERSION);
+        frame.setTitle("SMsplit" + (autoData.isConfigChanged() ? "*" : "") + " r" + About.REVISION);
     }
 
     public void setLocation(JFrame jFrame, int device, int configuration) {

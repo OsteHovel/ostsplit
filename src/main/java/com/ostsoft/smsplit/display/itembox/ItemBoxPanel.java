@@ -15,6 +15,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class ItemBoxPanel extends AutoPanel {
     private final Observer observer;
@@ -83,6 +86,7 @@ public class ItemBoxPanel extends AutoPanel {
             private double clickOffsetY = 0;
             private int offsetX = 0;
             private int offsetY = 0;
+            private Map<RectangleXML, Point.Double> startEntry = new HashMap<>();
 
             @Override
             public void mouseDragged(MouseEvent e) {
@@ -98,6 +102,13 @@ public class ItemBoxPanel extends AutoPanel {
 
                 dragEntry.x = (x + clickOffsetX);
                 dragEntry.y = (y + clickOffsetY);
+
+                for (RectangleXML rectangleXML : autoData.getSelectedItemBoxRectangles()) {
+                    rectangleXML.x = startEntry.get(rectangleXML).x + (x + clickOffsetX) - startDragX;
+                    rectangleXML.y = startEntry.get(rectangleXML).y + (y + clickOffsetY) - startDragY;
+                }
+
+
                 refresh();
             }
 
@@ -127,13 +138,26 @@ public class ItemBoxPanel extends AutoPanel {
                         startDragY = rectangleXML.y;
                         dragEntry = rectangleXML;
 
+                        for (RectangleXML selectedRectangle : autoData.getSelectedItemBoxRectangles()) {
+                            startEntry.put(selectedRectangle, new Point.Double(selectedRectangle.x, selectedRectangle.y));
+                        }
+
                         if (!autoData.getSelectedItemBoxRectangles().contains(rectangleXML)) {
-                            autoData.getSelectedItemBoxRectangles().add(rectangleXML);
-                            autoData.fireEvent(EventType.ITEMBOX_RECTANGLE_SELECTED);
+                            if (e.isShiftDown()) {
+                                autoData.getSelectedItemBoxRectangles().add(rectangleXML);
+                                autoData.fireEvent(EventType.ITEMBOX_RECTANGLE_SELECTED);
+                            } else {
+                                startEntry.clear();
+                                autoData.getSelectedItemBoxRectangles().clear();
+                                autoData.getSelectedItemBoxRectangles().add(rectangleXML);
+                                autoData.fireEvent(EventType.ITEMBOX_RECTANGLE_SELECTED);
+                            }
                         }
                         return;
                     }
                 }
+
+                startEntry.clear();
                 autoData.getSelectedItemBoxRectangles().clear();
                 autoData.fireEvent(EventType.ITEMBOX_RECTANGLE_SELECTED);
             }
@@ -147,13 +171,19 @@ public class ItemBoxPanel extends AutoPanel {
                     return;
                 }
 
+                for (RectangleXML rectangleXML : autoData.getSelectedItemBoxRectangles()) {
+                    rectangleXML.x = startEntry.get(rectangleXML).x;
+                    rectangleXML.y = startEntry.get(rectangleXML).y;
+                }
+
                 dragEntry.x = startDragX;
                 dragEntry.y = startDragY;
                 double x = ((e.getX() - offsetX) * 100d) / imagePanel.getImage().getWidth(null);
                 double y = ((e.getY() - offsetY) * 100d) / imagePanel.getImage().getHeight(null);
 
+                UUID uuid = UUID.randomUUID();
                 for (RectangleXML rectangleXML : autoData.getSelectedItemBoxRectangles()) {
-                    autoData.getCommandCenter().executeCommand(new MoveRectangleCommand(autoData, rectangleXML
+                    autoData.getCommandCenter().executeCommand(new MoveRectangleCommand(uuid, autoData, rectangleXML
                             , rectangleXML.x + (x - startDragX) + clickOffsetX
                             , rectangleXML.y + (y - startDragY) + clickOffsetY
                     ));

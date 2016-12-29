@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class About extends JFrame {
-    public final static String VERSION = "0.12";
+    public final static int REVISION = 13;
     public static final String SPECIAL = "";
 
     public About() throws HeadlessException {
@@ -17,7 +17,7 @@ public class About extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         setSize(640, 480);
-        setTitle("About SMsplit " + VERSION + " " + SPECIAL);
+        setTitle("About SMsplit r" + REVISION + " " + SPECIAL);
 
         JPanel panel = new JPanel();
         getContentPane().add(panel, BorderLayout.CENTER);

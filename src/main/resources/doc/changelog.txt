@@ -3,12 +3,18 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+r13:
+ - Changed to use revision instead of version
+ - Autoadjust actually changes the x,y,width and height number boxes
+ - Only ask if you want to save your changes if there has been changes
+ - Cancel while exiting does not close window
+ - Rectangle selection, hold shift to select multiple rectangles, reverted to old behaviour as default
+ - Now you can see all selected rectangles move when moving multiple rectangles
+ - Undo/redo now moves all the selected rectangles in a single operation
+
 v0.12:
  - Added actions to each itemBox and configurable matching methods
  - Added default action if none was specified
- - Autoadjust actually changes the x,y,width and height boxes
- - Only ask if you want to save your changes if there has been changes
- - Cancel while exiting does not close window
 
 v0.11:
  - Add multiple selection rectangles

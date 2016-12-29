@@ -4,12 +4,24 @@ import com.ostsoft.smsplit.AutoData;
 import com.ostsoft.smsplit.observer.EventType;
 import com.ostsoft.smsplit.xml.config.RectangleXML;
 
+import java.util.UUID;
+
 public class MoveRectangleCommand extends Command {
 
     private final AutoData autoData;
     private final RectangleXML rectangleXML;
     private final double newX, newY;
     private final double oldX, oldY;
+
+    public MoveRectangleCommand(UUID uuid, AutoData autoData, RectangleXML rectangleXML, double newX, double newY) {
+        super(uuid);
+        this.autoData = autoData;
+        this.rectangleXML = rectangleXML;
+        this.newX = newX;
+        this.newY = newY;
+        this.oldX = rectangleXML.x;
+        this.oldY = rectangleXML.y;
+    }
 
     public MoveRectangleCommand(AutoData autoData, RectangleXML rectangleXML, double newX, double newY) {
         this.autoData = autoData;
