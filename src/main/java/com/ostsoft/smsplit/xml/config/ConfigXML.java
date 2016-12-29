@@ -18,6 +18,6 @@ public class ConfigXML {
     @XmlElement(name = "itemboxes")
     public ItemBoxesXML itemBoxes = new ItemBoxesXML();
 
-    @XmlAttribute
+    @XmlAttribute(name = "cycletime")
     public float cycleTime = 250f;
 }

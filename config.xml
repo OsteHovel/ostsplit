@@ -5,7 +5,7 @@
         <windowcapture windowTitle="obs32" x="0" y="0" width="640" height="480"/>
     </capture>
     <splitters method="LIVESPLIT">
-        <livesplit host="127.0.0.1" port="16834" timeout="1000"/>
+        <livesplit host="cap" port="16834" timeout="1000"/>
         <hotkeysplit itemSplitKeycode="0" delay="20"/>
     </splitters>
     <debug capture="false"/>

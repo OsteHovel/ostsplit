@@ -3,6 +3,9 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+r15:
+ - Adjustable cycle time
+
 r14:
  - Fixed exception while dragging rectangles
  - Added ability to pause the capture from the menu
