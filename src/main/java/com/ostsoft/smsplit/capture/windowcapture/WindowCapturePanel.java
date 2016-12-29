@@ -17,6 +17,7 @@ public class WindowCapturePanel extends JPanel {
     private final SpinnerNumberModel ySpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     private final SpinnerNumberModel widthSpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     private final SpinnerNumberModel heightSpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
+    private boolean loading = false;
 
     public WindowCapturePanel(AutoData autoData) {
         this.autoData = autoData;
@@ -101,40 +102,51 @@ public class WindowCapturePanel extends JPanel {
         add(heightSpinner, gbc_spinner_3);
 
         windowTitleComboBox.addActionListener(e -> {
-            autoData.config.capture.windowCapture.windowTitle = (String) windowTitleComboBox.getModel().getSelectedItem();
-            autoData.setConfigChanged(true);
+            if (!loading) {
+                autoData.config.capture.windowCapture.windowTitle = (String) windowTitleComboBox.getModel().getSelectedItem();
+                autoData.setConfigChanged(true);
+            }
         });
 
         xSpinnerModel.addChangeListener(e -> {
-            if (xSpinner.getValue() instanceof Integer) {
-                autoData.config.capture.windowCapture.x = (int) xSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (xSpinner.getValue() instanceof Integer) {
+                    autoData.config.capture.windowCapture.x = (int) xSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         ySpinnerModel.addChangeListener(e -> {
-            if (ySpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.windowCapture.y = (int) ySpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (ySpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.windowCapture.y = (int) ySpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         widthSpinnerModel.addChangeListener(e -> {
-            if (widthSpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.windowCapture.width = (int) widthSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (widthSpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.windowCapture.width = (int) widthSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         heightSpinnerModel.addChangeListener(e -> {
-            if (heightSpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.windowCapture.height = (int) heightSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (heightSpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.windowCapture.height = (int) heightSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
     }
 
     public void loadSettings() {
+        loading = true;
         List<String> windowTitles = new ArrayList<>();
         List<DesktopWindow> windows = WindowUtils.getAllWindows(true);
         for (DesktopWindow window : windows) {
@@ -152,9 +164,11 @@ public class WindowCapturePanel extends JPanel {
             }
         }
 
+
         xSpinnerModel.setValue(autoData.config.capture.windowCapture.x);
         ySpinnerModel.setValue(autoData.config.capture.windowCapture.y);
         widthSpinnerModel.setValue(autoData.config.capture.windowCapture.width);
         heightSpinnerModel.setValue(autoData.config.capture.windowCapture.height);
+        loading = false;
     }
 }

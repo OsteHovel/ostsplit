@@ -5,6 +5,10 @@ Known issues:
 
 v0.12:
  - Added actions to each itemBox and configurable matching methods
+ - Added default action if none was specified
+ - Autoadjust actually changes the x,y,width and height boxes
+ - Only ask if you want to save your changes if there has been changes
+ - Cancel while exiting does not close window
 
 v0.11:
  - Add multiple selection rectangles

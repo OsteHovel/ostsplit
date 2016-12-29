@@ -59,6 +59,7 @@ public class WindowCapture implements Capture {
         autoData.config.capture.windowCapture.width = rectangle.width;
         autoData.config.capture.windowCapture.height = rectangle.height;
         autoData.setConfigChanged(true);
+        windowCapturePanel.loadSettings();
     }
 
     private WinDef.HWND findWindow(String partialWindowTitle) {

@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 public class WindowCaptureXML {
     @XmlAttribute
-    public String windowTitle = "AmaRecTV";
+    public String windowTitle = "OBS";
 
     @XmlAttribute
     public int x = 0;

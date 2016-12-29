@@ -11,51 +11,56 @@ import com.ostsoft.smsplit.xml.XMLUtil;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 public class AutoWindow {
     private final AutoActions autoActions = new AutoActions(this);
     private final AutoTabbedPane tabbedPane = new AutoTabbedPane();
     private final AutoData autoData;
-    private final JFrame jFrame = new JFrame();
+    private final JFrame frame = new JFrame();
     ;
 
     public AutoWindow(AutoData autoData) {
         this.autoData = autoData;
         setTitle();
-        jFrame.setSize(800, 600);
-        jFrame.setJMenuBar(new AutoMenu(this));
+        frame.setSize(800, 600);
+        frame.setJMenuBar(new AutoMenu(this));
 
-        jFrame.getContentPane().setLayout(new MultiBorderLayout());
-        jFrame.getContentPane().add(tabbedPane, MultiBorderLayout.CENTER);
+        frame.getContentPane().setLayout(new MultiBorderLayout());
+        frame.getContentPane().add(tabbedPane, MultiBorderLayout.CENTER);
         tabbedPane.addTab("Capture", new CapturePanel(autoData));
         tabbedPane.addTab("Item Boxes", new ItemBoxPanel(autoData));
         tabbedPane.addTab("Log", new LogPanel(autoData));
-        jFrame.add(new EditorStatusBar(autoData), MultiBorderLayout.SOUTH);
+        frame.add(new EditorStatusBar(autoData), MultiBorderLayout.SOUTH);
 
-//        jFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
-//        setLocation(jFrame, 5, 0);
-//        Point location = jFrame.getLocation();
+//        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+//        setLocation(frame, 5, 0);
+//        Point location = frame.getLocation();
 //        location.translate(500, 200);
-//        jFrame.setLocation(location);
+//        frame.setLocation(location);
 
-        jFrame.setVisible(true);
+        frame.setVisible(true);
 
-        jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        jFrame.addWindowListener(new java.awt.event.WindowAdapter() {
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-                int returnDialogValue = JOptionPane.showConfirmDialog(jFrame,
-                        "You have unsaved changes, do you want change them?", "Exiting",
-                        JOptionPane.YES_NO_CANCEL_OPTION,
-                        JOptionPane.QUESTION_MESSAGE);
-                if (returnDialogValue == JOptionPane.YES_OPTION) {
-                    autoData.fireEvent(EventType.SAVE);
-                    XMLUtil.encodeConfig("config.xml", autoData.config);
+                if (autoData.isConfigChanged()) {
+                    int returnDialogValue = JOptionPane.showConfirmDialog(frame,
+                            "You have unsaved changes, do you want save them?", "SMsplit",
+                            JOptionPane.YES_NO_CANCEL_OPTION,
+                            JOptionPane.QUESTION_MESSAGE);
 
-                    System.exit(0);
-                } else if (returnDialogValue == JOptionPane.NO_OPTION) {
-                    System.exit(0);
+                    if (returnDialogValue == JOptionPane.YES_OPTION) {
+                        autoData.fireEvent(EventType.SAVE);
+                        XMLUtil.encodeConfig("config.xml", autoData.config);
+                    } else if (returnDialogValue == JOptionPane.CANCEL_OPTION) {
+                        // Cancel
+                        return;
+                    }
                 }
+                // Exit
+                System.exit(0);
             }
         });
 
@@ -68,7 +73,7 @@ public class AutoWindow {
     }
 
     private void setTitle() {
-        jFrame.setTitle("SMsplit" + (autoData.isConfigChanged() ? "*" : "") + " " + About.VERSION);
+        frame.setTitle("SMsplit" + (autoData.isConfigChanged() ? "*" : "") + " " + About.VERSION);
     }
 
     public void setLocation(JFrame jFrame, int device, int configuration) {
@@ -88,8 +93,8 @@ public class AutoWindow {
         jFrame.setLocation(bounds.getLocation());
     }
 
-    public JFrame getjFrame() {
-        return jFrame;
+    public JFrame getFrame() {
+        return frame;
     }
 
     public AutoActions getAutoActions() {
@@ -101,6 +106,6 @@ public class AutoWindow {
     }
 
     public void exit() {
-        System.exit(0);
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

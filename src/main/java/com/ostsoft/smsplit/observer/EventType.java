@@ -7,14 +7,19 @@ public enum EventType {
     CLEAR_UNDO_REDO, // Clears the Undo/Redo queue
 
     // General
-    LOAD, // Load new rom
-    SAVE, // Save rom
-    SAVE_AS, // Save rom as new fileName
-    CLOSE, // Close current rom
+    LOAD, // Load
+    SAVE, // Save
+    SAVE_AS, // Save as new fileName
     EXIT, // Close editor
 
-    // Animation
-    UPDATED_GAME_IMAGE, ITEMBOX_RECTANGLE_SELECTED, ITEMBOX_RECTANGLE_MOVED, ITEMBOX_SELECTED, CONFIG_UPDATE,
+    // Rectangles
+    ITEMBOX_RECTANGLE_SELECTED,
+    ITEMBOX_RECTANGLE_MOVED,
+    ITEMBOX_SELECTED,
+
+    // Misc
+    UPDATED_GAME_IMAGE,
+    CONFIG_UPDATE,
 
 
 }

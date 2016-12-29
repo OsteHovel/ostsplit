@@ -10,6 +10,10 @@ import com.ostsoft.smsplit.split.LiveSplit;
 import com.ostsoft.smsplit.split.NullSplit;
 import com.ostsoft.smsplit.xml.XMLUtil;
 import com.ostsoft.smsplit.xml.config.ConfigXML;
+import com.ostsoft.smsplit.xml.config.ItemBox;
+import com.ostsoft.smsplit.xml.config.action.Action;
+import com.ostsoft.smsplit.xml.config.action.ActionXML;
+import com.ostsoft.smsplit.xml.config.action.Matching;
 
 import javax.swing.*;
 import java.awt.image.BufferedImage;
@@ -28,6 +32,9 @@ public class AutoSplit {
             JOptionPane.showMessageDialog(null, "Missing config.xml", "Error", JOptionPane.ERROR_MESSAGE);
             autoData.config = new ConfigXML();
         }
+
+        addDefault(autoData.config);
+
 
         switch (autoData.config.splitters.method) {
             case LIVESPLIT:
@@ -50,6 +57,14 @@ public class AutoSplit {
 
         autoWindow = new AutoWindow(autoData);
         itemBoxSplitter = new ItemBoxSplitter(autoData);
+    }
+
+    private void addDefault(ConfigXML config) {
+        for (ItemBox itemBox : config.itemBoxes.itemBox) {
+            if (itemBox.actions.isEmpty()) {
+                itemBox.actions.add(new ActionXML(itemBox.name, Matching.CONTAINS_INSENSITIVE, Action.SPLIT));
+            }
+        }
     }
 
     public void cycle(long timeSinceLastUpdate) {

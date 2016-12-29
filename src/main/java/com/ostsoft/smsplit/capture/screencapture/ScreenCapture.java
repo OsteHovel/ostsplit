@@ -62,6 +62,7 @@ public class ScreenCapture implements Capture {
         autoData.config.capture.screenCapture.y = rectangle.y;
         autoData.config.capture.screenCapture.width = rectangle.width;
         autoData.config.capture.screenCapture.height = rectangle.height;
+        screenCapturePanel.loadSettings();
         autoData.setConfigChanged(true);
     }
 

@@ -11,6 +11,7 @@ public class ScreenCapturePanel extends JPanel {
     private final SpinnerNumberModel ySpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     private final SpinnerNumberModel widthSpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
     private final SpinnerNumberModel heightSpinnerModel = new SpinnerNumberModel(0, 0, Integer.MAX_VALUE, 1);
+    private boolean loading = false;
 
 
     public ScreenCapturePanel(AutoData autoData) {
@@ -85,39 +86,49 @@ public class ScreenCapturePanel extends JPanel {
 
 
         xSpinnerModel.addChangeListener(e -> {
-            if (xSpinner.getValue() instanceof Integer) {
-                autoData.config.capture.screenCapture.x = (int) xSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (xSpinner.getValue() instanceof Integer) {
+                    autoData.config.capture.screenCapture.x = (int) xSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         ySpinnerModel.addChangeListener(e -> {
-            if (ySpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.screenCapture.y = (int) ySpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (ySpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.screenCapture.y = (int) ySpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         widthSpinnerModel.addChangeListener(e -> {
-            if (widthSpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.screenCapture.width = (int) widthSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (widthSpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.screenCapture.width = (int) widthSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
         heightSpinnerModel.addChangeListener(e -> {
-            if (heightSpinnerModel.getValue() instanceof Integer) {
-                autoData.config.capture.screenCapture.height = (int) heightSpinnerModel.getValue();
-                autoData.setConfigChanged(true);
+            if (!loading) {
+                if (heightSpinnerModel.getValue() instanceof Integer) {
+                    autoData.config.capture.screenCapture.height = (int) heightSpinnerModel.getValue();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 
     }
 
     public void loadSettings() {
+        loading = true;
         xSpinnerModel.setValue(autoData.config.capture.screenCapture.x);
         ySpinnerModel.setValue(autoData.config.capture.screenCapture.y);
         widthSpinnerModel.setValue(autoData.config.capture.screenCapture.width);
         heightSpinnerModel.setValue(autoData.config.capture.screenCapture.height);
+        loading = false;
     }
 }
