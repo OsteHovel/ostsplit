@@ -1,7 +1,11 @@
 Big thanks to:
  - 0xff42 for supporting me during the development, without our brainstorming this would not exist
 
+Documentation:
+ - Enmet
+
 Testing crew:
+ - Enmet
  - Matrick
  - Nutella4Eva
  - InsaneFirebat
