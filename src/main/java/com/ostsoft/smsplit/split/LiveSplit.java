@@ -215,6 +215,11 @@ public class LiveSplit implements Split {
                     startTimer();
                     break;
                 }
+                else if (action.action == Action.RESET) {
+                    logger.log(Level.INFO, "Resetting Livesplit timer");
+                    reset();
+                    break;
+                }
             }
         }
 

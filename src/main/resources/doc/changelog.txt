@@ -3,6 +3,9 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+r16:
+ - Added RESET as action, to reset splits
+
 r15:
  - Adjustable cycle time
 
