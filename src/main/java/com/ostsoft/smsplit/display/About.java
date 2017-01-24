@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class About extends JFrame {
-    public final static int REVISION = 16;
+    public final static int REVISION = 17;
     public static final String SPECIAL = "";
 
     public About() throws HeadlessException {

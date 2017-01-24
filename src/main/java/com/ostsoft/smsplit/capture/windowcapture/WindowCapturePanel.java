@@ -103,8 +103,10 @@ public class WindowCapturePanel extends JPanel {
 
         windowTitleComboBox.addActionListener(e -> {
             if (!loading) {
-                autoData.config.capture.windowCapture.windowTitle = (String) windowTitleComboBox.getModel().getSelectedItem();
-                autoData.setConfigChanged(true);
+                if (!autoData.config.capture.windowCapture.partial) {
+                    autoData.config.capture.windowCapture.windowTitle = (String) windowTitleComboBox.getModel().getSelectedItem();
+                    autoData.setConfigChanged(true);
+                }
             }
         });
 

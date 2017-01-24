@@ -7,6 +7,9 @@ public class WindowCaptureXML {
     public String windowTitle = "OBS";
 
     @XmlAttribute
+    public boolean partial = false;
+
+    @XmlAttribute
     public int x = 0;
 
     @XmlAttribute

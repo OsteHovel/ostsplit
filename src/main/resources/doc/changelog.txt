@@ -3,6 +3,9 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+r17:
+ - Added partial flag to window capture config to be able to match window with changing title like RetroArch
+
 r16:
  - Added RESET as action, to reset splits
 
