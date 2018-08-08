@@ -1,0 +1,18 @@
+package com.ostsoft.games.ostsplit.split;
+
+import com.ostsoft.games.ostsplit.xml.config.ItemBox;
+
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class NullSplit implements Split {
+    private static Logger logger = Logger.getLogger(NullSplit.class.getName());
+
+    @Override
+    public void itemSplit(Set<ItemBox> itemsToSplitOn) {
+        for (ItemBox itemBox : itemsToSplitOn) {
+            logger.log(Level.WARNING, "NullSplit is a dummy, " + itemBox.name);
+        }
+    }
+}
