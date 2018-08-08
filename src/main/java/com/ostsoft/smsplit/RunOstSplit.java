@@ -1,12 +1,13 @@
 package com.ostsoft.smsplit;
 
-import javax.swing.*;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Main {
+public class RunOstSplit {
     private static float cycleTime = 250f;
-    private static Logger logger = Logger.getLogger(Main.class.getName());
+    private static Logger logger = Logger.getLogger(RunOstSplit.class.getName());
 
     public static void main(String[] args) {
         try {
@@ -15,7 +16,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        AutoSplit autoSplit = new AutoSplit();
+        OstSplit ostSplit = new OstSplit();
 
         float time;
         long timeStart = System.nanoTime();
@@ -24,7 +25,7 @@ public class Main {
             long timeSinceLastUpdate = (System.nanoTime() - timeStart) / 1000000;
             timeStart = System.nanoTime();
 
-            autoSplit.cycle(timeSinceLastUpdate);
+            ostSplit.cycle(timeSinceLastUpdate);
             timeEnd = System.nanoTime();
             time = (timeEnd - timeStart) / 1000000.0f;
 
@@ -45,6 +46,6 @@ public class Main {
     }
 
     public static void setCycleTime(float cycleTime) {
-        Main.cycleTime = cycleTime;
+        RunOstSplit.cycleTime = cycleTime;
     }
 }

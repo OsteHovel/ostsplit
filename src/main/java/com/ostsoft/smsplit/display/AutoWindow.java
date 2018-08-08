@@ -2,6 +2,7 @@ package com.ostsoft.smsplit.display;
 
 import com.ostsoft.smsplit.AutoData;
 import com.ostsoft.smsplit.EditorStatusBar;
+import com.ostsoft.smsplit.OstSplit;
 import com.ostsoft.smsplit.display.config.CapturePanel;
 import com.ostsoft.smsplit.display.itembox.ItemBoxPanel;
 import com.ostsoft.smsplit.display.panel.AutoTabbedPane;
@@ -9,8 +10,13 @@ import com.ostsoft.smsplit.display.panel.MultiBorderLayout;
 import com.ostsoft.smsplit.observer.EventType;
 import com.ostsoft.smsplit.xml.XMLUtil;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
 import java.awt.event.WindowEvent;
 
 public class AutoWindow {
@@ -33,28 +39,21 @@ public class AutoWindow {
         tabbedPane.addTab("Log", new LogPanel(autoData));
         frame.add(new EditorStatusBar(autoData), MultiBorderLayout.SOUTH);
 
-//        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
-//        setLocation(frame, 5, 0);
-//        Point location = frame.getLocation();
-//        location.translate(500, 200);
-//        frame.setLocation(location);
-
-        frame.setVisible(true);
-
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosing(java.awt.event.WindowEvent windowEvent) {
                 if (autoData.isConfigChanged()) {
                     int returnDialogValue = JOptionPane.showConfirmDialog(frame,
-                            "You have unsaved changes, do you want save them?", "SMsplit r" + About.REVISION,
+                            "You have unsaved changes, do you want save them?", OstSplit.TITLE,
                             JOptionPane.YES_NO_CANCEL_OPTION,
                             JOptionPane.QUESTION_MESSAGE);
 
                     if (returnDialogValue == JOptionPane.YES_OPTION) {
                         autoData.fireEvent(EventType.SAVE);
                         XMLUtil.encodeConfig("config.xml", autoData.config);
-                    } else if (returnDialogValue == JOptionPane.CANCEL_OPTION) {
+                    }
+                    else if (returnDialogValue == JOptionPane.CANCEL_OPTION) {
                         // Cancel
                         return;
                     }
@@ -70,10 +69,12 @@ public class AutoWindow {
             }
         });
         autoData.setConfigChanged(false);
+
+        frame.setVisible(true);
     }
 
     private void setTitle() {
-        frame.setTitle("SMsplit" + (autoData.isConfigChanged() ? "*" : "") + " r" + About.REVISION);
+        frame.setTitle(OstSplit.TITLE + (autoData.isConfigChanged() ? " (Unsaved changes)" : ""));
     }
 
     public void setLocation(JFrame jFrame, int device, int configuration) {

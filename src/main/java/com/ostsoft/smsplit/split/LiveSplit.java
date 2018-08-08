@@ -1,18 +1,20 @@
 package com.ostsoft.smsplit.split;
 
+import com.ostsoft.smsplit.OstSplit;
 import com.ostsoft.smsplit.xml.config.ConfigXML;
 import com.ostsoft.smsplit.xml.config.ItemBox;
 import com.ostsoft.smsplit.xml.config.action.Action;
 import com.ostsoft.smsplit.xml.config.action.ActionXML;
 import com.ostsoft.smsplit.xml.config.action.Matching;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
+import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,13 +35,13 @@ public class LiveSplit implements Split {
             socket = new Socket(host, port);
             socket.setKeepAlive(true);
             socket.setSoTimeout(timeout);
-            osw = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
+            osw = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
         }
         catch (Exception e) {
             e.printStackTrace();
             logger.log(Level.SEVERE, e.getMessage());
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), OstSplit.TITLE, JOptionPane.ERROR_MESSAGE);
         }
     }
 

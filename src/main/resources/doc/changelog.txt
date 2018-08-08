@@ -3,6 +3,9 @@ Changelog:
 Known issues:
  - It does not reconnect to LiveSplit
 
+18.0:
+ - Switched from Maven to Gradle
+
 r17:
  - Added partial flag to window capture config to be able to match window with changing title like RetroArch
 

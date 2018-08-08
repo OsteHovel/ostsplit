@@ -1,23 +1,35 @@
 package com.ostsoft.smsplit.display;
 
+import com.ostsoft.smsplit.OstSplit;
 import com.ostsoft.smsplit.util.ResourceUtil;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.AbstractAction;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.KeyStroke;
+import javax.swing.SwingConstants;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class About extends JFrame {
-    public final static int REVISION = 17;
-    public static final String SPECIAL = "";
 
     public About() throws HeadlessException {
         super();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         setSize(640, 480);
-        setTitle("About SMsplit r" + REVISION + " " + SPECIAL);
+        setTitle("About " + OstSplit.TITLE);
 
         JPanel panel = new JPanel();
         getContentPane().add(panel, BorderLayout.CENTER);
@@ -26,7 +38,7 @@ public class About extends JFrame {
         Box verticalBox = Box.createVerticalBox();
         panel.add(verticalBox, BorderLayout.NORTH);
 
-        JLabel lblJsm = new JLabel("SMsplit");
+        JLabel lblJsm = new JLabel("OstSplit");
         lblJsm.setFont(new Font("SansSerif", Font.PLAIN, 26));
         lblJsm.setAlignmentX(Component.CENTER_ALIGNMENT);
         lblJsm.setPreferredSize(new Dimension(100, 40));

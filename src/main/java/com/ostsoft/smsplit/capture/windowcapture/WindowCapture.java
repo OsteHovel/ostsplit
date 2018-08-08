@@ -9,8 +9,8 @@ import com.sun.jna.platform.win32.GDI32Util;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.logging.Level;
@@ -38,7 +38,8 @@ public class WindowCapture implements Capture {
                 logger.log(Level.SEVERE, "Error while cropping image: " + e.getMessage());
                 return null;
             }
-        } else {
+        }
+        else {
             logger.log(Level.SEVERE, "Window does not exist");
             hwnd = findWindow(autoData.config.capture.windowCapture.windowTitle);
         }

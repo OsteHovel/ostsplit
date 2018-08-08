@@ -1,4 +1,5 @@
-.idea/
+/.idea
+/.gradle
 *.iml
 /bin
 */target
@@ -6,4 +7,5 @@
 .project
 .classpath
 .DS_Store
-/cache
+/gradlew*
+/gradle
