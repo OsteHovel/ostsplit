@@ -20,7 +20,7 @@ shadowJar {
     baseName = 'OstSplit'
     classifier = null
     manifest {
-        attributes 'Main-Class': 'com.ostsoft.smsplit.RunOstSplit'
+        attributes 'Main-Class': 'com.ostsoft.games.ostsplit.RunOstSplit'
         attributes 'Specification-Version': version
     }
 }
