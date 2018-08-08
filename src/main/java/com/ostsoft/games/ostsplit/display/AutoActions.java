@@ -1,11 +1,9 @@
 package com.ostsoft.games.ostsplit.display;
 
 
-import com.ostsoft.games.ostsplit.AutoData;
 import com.ostsoft.games.ostsplit.observer.EventType;
 import com.ostsoft.games.ostsplit.observer.Observer;
 import com.ostsoft.games.ostsplit.util.ResourceUtil;
-import com.ostsoft.games.ostsplit.xml.XMLUtil;
 
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -88,14 +86,7 @@ public class AutoActions implements Observer {
         }
 
         public void actionPerformed(ActionEvent e) {
-            AutoData autoData = autoWindow.getAutoData();
-            if (autoData != null) {
-                autoData.fireEvent(EventType.LOAD);
-            } else {
-//                autoData.getEditorFile().load(false);
-            }
-            autoWindow.getAutoData().fireEvent(EventType.STATUS_BAR_MESSAGE, "Loaded");
-            autoData.setConfigChanged(false);
+            autoWindow.getAutoData().load(false);
         }
     }
 
@@ -111,11 +102,8 @@ public class AutoActions implements Observer {
 
         public void actionPerformed(ActionEvent e) {
             autoWindow.getAutoData().fireEvent(EventType.SAVE);
-            autoWindow.getAutoData().setConfigChanged(false);
-            XMLUtil.encodeConfig("config.xml", autoWindow.getAutoData().config);
-            autoWindow.getAutoData().fireEvent(EventType.STATUS_BAR_MESSAGE, "Saved");
+            autoWindow.getAutoData().save(false);
         }
-
     }
 
     private class SaveAsAction extends AbstractAction {
@@ -130,8 +118,8 @@ public class AutoActions implements Observer {
 
         public void actionPerformed(ActionEvent e) {
             autoWindow.getAutoData().fireEvent(EventType.SAVE_AS);
+            autoWindow.getAutoData().save(true);
         }
-
     }
 
     private class CloseAction extends AbstractAction {
@@ -160,12 +148,7 @@ public class AutoActions implements Observer {
         }
 
         public void actionPerformed(ActionEvent e) {
-//            if (editor.getAutoData() != null) {
-//                editor.getAutoData().fireEvent(EventType.EXIT);
-//            }
-//            else {
             autoWindow.exit();
-//            }
         }
 
     }

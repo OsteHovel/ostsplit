@@ -8,16 +8,13 @@ import com.ostsoft.games.ostsplit.observer.EventType;
 import com.ostsoft.games.ostsplit.split.HotkeySplit;
 import com.ostsoft.games.ostsplit.split.LiveSplit;
 import com.ostsoft.games.ostsplit.split.NullSplit;
-import com.ostsoft.games.ostsplit.xml.XMLUtil;
 import com.ostsoft.games.ostsplit.xml.config.ConfigXML;
 import com.ostsoft.games.ostsplit.xml.config.ItemBox;
 import com.ostsoft.games.ostsplit.xml.config.action.Action;
 import com.ostsoft.games.ostsplit.xml.config.action.ActionXML;
 import com.ostsoft.games.ostsplit.xml.config.action.Matching;
 
-import javax.swing.JOptionPane;
 import java.util.logging.Logger;
-import java.util.prefs.Preferences;
 
 public class OstSplit {
     public static final String TITLE;
@@ -28,21 +25,15 @@ public class OstSplit {
 
     static {
         if (OstSplit.class.getPackage().getSpecificationVersion() != null) {
-            TITLE = OstSplit.class.getPackage().getSpecificationVersion();
+            TITLE = "OstSplit " + OstSplit.class.getPackage().getSpecificationVersion();
         }
         else {
-            TITLE = "DEVELOPMENT";
+            TITLE = "OstSplit DEVELOPMENT";
         }
     }
 
     public OstSplit() {
-        Preferences preferences = Preferences.userNodeForPackage(OstSplit.class);
-        String configLocation = preferences.get("configLocation", "config.xml");
-        autoData.config = XMLUtil.decodeConfig(configLocation);
-        if (autoData.config == null) {
-            JOptionPane.showMessageDialog(null, configLocation + " was not found, starting with empty configuration", OstSplit.TITLE, JOptionPane.WARNING_MESSAGE);
-            autoData.config = new ConfigXML();
-        }
+        autoData.load(true);
 
         RunOstSplit.setCycleTime(autoData.config.cycleTime);
         addDefault(autoData.config);

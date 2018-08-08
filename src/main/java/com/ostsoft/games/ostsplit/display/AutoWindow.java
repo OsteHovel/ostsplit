@@ -8,7 +8,6 @@ import com.ostsoft.games.ostsplit.display.itembox.ItemBoxPanel;
 import com.ostsoft.games.ostsplit.display.panel.AutoTabbedPane;
 import com.ostsoft.games.ostsplit.display.panel.MultiBorderLayout;
 import com.ostsoft.games.ostsplit.observer.EventType;
-import com.ostsoft.games.ostsplit.xml.XMLUtil;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -51,7 +50,7 @@ public class AutoWindow {
 
                     if (returnDialogValue == JOptionPane.YES_OPTION) {
                         autoData.fireEvent(EventType.SAVE);
-                        XMLUtil.encodeConfig("config.xml", autoData.config);
+                        autoData.save(false);
                     }
                     else if (returnDialogValue == JOptionPane.CANCEL_OPTION) {
                         // Cancel
@@ -68,7 +67,6 @@ public class AutoWindow {
                 setTitle();
             }
         });
-        autoData.setConfigChanged(false);
 
         frame.setVisible(true);
     }

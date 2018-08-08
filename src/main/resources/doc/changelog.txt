@@ -5,6 +5,7 @@ Known issues:
 
 18.0:
  - Switched from Maven to Gradle
+ - Load and save config files and reloads the last used config on startup
 
 r17:
  - Added partial flag to window capture config to be able to match window with changing title like RetroArch
